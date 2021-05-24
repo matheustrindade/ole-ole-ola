@@ -2,7 +2,9 @@ body {
 	height: 100vh;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 16px;
-	/* overflow: hidden; */
+	margin: 0;
+	overflow: hidden;
+	padding: 0;
 	width: 100vw;
 }
 
@@ -70,6 +72,51 @@ body {
 
 /* ======================= */
 
+.stop-button {
+	bottom: 5rem;
+	border: none;
+	border-radius: .25rem;
+	box-shadow: -1px 3px 3px rgba(0,0,0,.5);
+	clip-path: circle(70.7% at 50% 50%);
+	color: #4a4a4a;
+	font-size: 1.3rem;
+	font-weight: 900;
+	letter-spacing: .25rem;
+	padding: 1rem;
+	position: absolute;
+	right: 5rem;
+	text-transform: uppercase;
+	transform: translateX(200%);
+	transition: 350ms;
+}
+
+.stop-button .stop-btn-label {
+	display: block;
+	transform: skewX(-20deg);
+}
+
+.start .stop-button {
+	animation: show-up-pause-button ease-in-out 600ms forwards;
+	animation-delay: 800ms;
+}
+
+
+@keyframes show-up-pause-button  {
+	0% {
+		transform: translateX(200%);
+	}
+	50% {
+		transform: translateX(-20%);
+	}
+	75% {
+		transform: translateX(20%);
+	}
+	100% {
+		transform: translateX(0%);
+	}
+}
+
+/* ======================= */
 .alert-sound-on,
 .countdown {
 	opacity: 0;

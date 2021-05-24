@@ -4,7 +4,6 @@ function handleClickLogo() {
 	logoContainer.className = `${currentClassNames} expanded`
 	
 	const mainDiv = document.getElementById("main")
-	const mainClassNames = logoComainDivntainer.className
+	const mainClassNames = mainDiv.className
 	mainDiv.className = `${mainClassNames} start`
-
 }
