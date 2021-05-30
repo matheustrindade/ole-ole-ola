@@ -71,9 +71,13 @@ body {
 
 
 /* ======================= */
-
-.stop-button {
+#pause-button-container {
 	bottom: 5rem;
+	position: absolute;
+	right: 5rem;
+}
+
+#pause-button {
 	border: none;
 	border-radius: .25rem;
 	box-shadow: -1px 3px 3px rgba(0,0,0,.5);
@@ -84,27 +88,34 @@ body {
 	font-weight: 900;
 	letter-spacing: .25rem;
 	padding: 1rem;
-	position: absolute;
-	right: 5rem;
 	text-transform: uppercase;
 	transform: translateX(200%);
 	transition: transform 350ms, box-shadow 200ms;
 }
 
-.stop-button:active {
+#pause-button:active {
 	bottom: calc(5rem - .125rem);
 	box-shadow: 0px 1px 1px rgba(0,0,0,.5);
 	right: calc(5rem - .125rem);
 }
 
-.stop-button .stop-btn-label {
+#pause-button #pause-btn-label {
 	display: block;
 	transform: skewX(-20deg);
 }
 
-.start .stop-button {
+.start #pause-button {
 	animation: show-up-pause-button ease-in-out 600ms forwards;
 	animation-delay: 800ms;
+}
+
+#pause-button-container.shrink {
+	filter: drop-shadow(-1px 3px 3px rgba(0,0,0,.5));
+}
+
+#pause-button-container.shrink button {
+	clip-path: circle(50% at 50% 50%);
+	width: 3.5rem;
 }
 
 
