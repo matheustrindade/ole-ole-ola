@@ -11,7 +11,7 @@ function shriknkPauseButton() {
 	"use strict"
 	setTimeout(() => {
 		addClassById("pause-button-container", "shrink")
-	}, 1600)
+	}, 2300)
 }
 
 function handleClickLogo() {

@@ -102,11 +102,37 @@ body {
 #pause-button #pause-btn-label {
 	display: block;
 	transform: skewX(-20deg);
+	transform-origin: right;
+	transition: transform 400ms ease;
 }
 
 .start #pause-button {
 	animation: show-up-pause-button ease-in-out 600ms forwards;
 	animation-delay: 800ms;
+	overflow: hidden;
+	position: relative;
+	transition: clip-path 300ms ease 250ms, width 300ms ease;
+	width: 10rem;
+}
+
+.start #pause-button::after,
+.start #pause-button::before {
+	content: '';
+	background-color: #4a4a4a;
+	position: absolute;
+	height: 1.3rem;
+	width: .5rem;
+	transition: top 300ms ease 500ms ;
+	transform: translateY(-50%);
+	top: -25%;
+}
+
+.start #pause-button::after {
+	left: 30%;
+}
+
+.start #pause-button::before {
+	right: 30%;
 }
 
 #pause-button-container.shrink {
@@ -116,6 +142,16 @@ body {
 #pause-button-container.shrink button {
 	clip-path: circle(50% at 50% 50%);
 	width: 3.5rem;
+}
+
+#pause-button-container.shrink #pause-btn-label {
+	transform: scaleX(0);
+}
+
+#pause-button-container.shrink #pause-button::after,
+#pause-button-container.shrink #pause-button::before {
+	bottom: 0%;
+	top: 50%;
 }
 
 
