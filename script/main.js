@@ -7,11 +7,16 @@ function addClassById(id, classes) {
 
 }
 
-function shriknkPauseButton() {
+function addClassAfterTime(id, classNames, time) {
 	"use strict"
 	setTimeout(() => {
-		addClassById("pause-button-container", "shrink")
-	}, 2300)
+		addClassById(id, classNames)
+	}, time)
+}
+
+function shriknkPauseButton() {
+	"use strict"
+	addClassAfterTime("pause-button-container", "shrink", 2300)
 }
 
 function handleClickLogo() {
@@ -19,7 +24,9 @@ function handleClickLogo() {
 
 	addClassById("pt-logo", "expanded")
 	addClassById("main", "start")
-	
 
 	shriknkPauseButton()
+
+	addClassAfterTime("alert-sound", "show", 3500)
+
 }
