@@ -1,46 +1,48 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>...</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>...</title>
-	<link rel="stylesheet" href="./css/style.css">
-</head>
-
-<body>
-	<div class="container" id="main">
-		<div class="logo-wrapper" id="pt-logo" title="clique" onclick="handleClickLogo()">
-			<div class="party-logo">
-			</div>
-		</div>
-		<div id="alert-sound" class="alert-sound-on absolute-center">
-			<span data-text="ligue o">
-				ligue o
-			</span>
-			<span data-text="som">
-				som
-			</span>
-		</div>
-		<!-- <div class="countdown absolute-center">
-			<span>
-				3
-			</span>
-			<span>
-				2
-			</span>
-			<span>
-				1
-			</span>
-		</div> -->
-		<div id="pause-button-container">
-			<button id="pause-button">
-				<span id="pause-btn-label">pausar</span>
-				<span id="pause-btn-icon"></span>
-			</button>
-		</div>
-	</div>
-	<script src="./script/main.js"></script>
-</body>
-
+  <body>
+    <div class="container" id="main">
+      <div
+        class="logo-wrapper"
+        id="pt-logo"
+        title="clique"
+        onclick="handleClickLogo()"
+      >
+        <div class="party-logo"></div>
+      </div>
+      <div id="alert-sound" class="alert-sound-on absolute-center">
+        <div id="sound-on-first-part">
+          <span data-text="ligue o"> ligue o </span>
+        </div>
+        <div id="sound-on-second-part">
+          <span data-text="som"> som </span>
+        </div>
+      </div>
+      <div id="countdown" class="countdown absolute-center">
+        <div class="count-container">
+          <span data-text="3"> 3 </span>
+        </div>
+        <div class="count-container">
+          <span data-text="2"> 2 </span>
+        </div>
+        <div class="count-container">
+          <span data-text="1"> 1 </span>
+        </div>
+      </div>
+      <div id="pause-button-container">
+        <button id="pause-button">
+          <span id="pause-btn-label">parar</span>
+          <span id="pause-btn-icon"></span>
+        </button>
+      </div>
+    </div>
+    <script src="./script/main.js"></script>
+  </body>
 </html>

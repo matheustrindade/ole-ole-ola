@@ -5,22 +5,23 @@
   width: 100%;
 }
 
-.alert-sound-on span:nth-child(1) {
+.alert-sound-on div:nth-child(1) span {
   font-size: 7.5rem;
   font-weight: 600;
   letter-spacing: 0.75rem;
   line-height: 7.5rem;
 }
 
-.alert-sound-on span,
+.alert-sound-on div > span,
 .countdown span {
   color: #fff;
+  display: block;
   position: relative;
   width: 100%;
   -webkit-text-stroke: 0.25rem #000;
 }
 
-.alert-sound-on span::before,
+.alert-sound-on div > span::before,
 .countdown span::before {
   content: attr(data-text);
   color: #000;
@@ -30,30 +31,38 @@
   top: 50%;
 }
 
-.alert-sound-on span:nth-child(2) {
+.alert-sound-on div:nth-child(2) span {
   font-size: 11rem;
   font-weight: 900;
   letter-spacing: 1.5rem;
   line-height: 11rem;
-  margin-right: 1.5rem;
   text-transform: uppercase;
+}
+
+.alert-sound-on div:nth-child(2) span {
+  font-size: 7.5rem;
 }
 
 .alert-sound-on.show {
   display: flex;
 }
 
-.alert-sound-on.show span:nth-child(1) {
+.alert-sound-on.show div:nth-child(1) span {
   animation: move-alert-sound-text 3s linear 2 forwards;
 }
 
-.alert-sound-on.show span:nth-child(2) {
+.alert-sound-on.show div:nth-child(2) span {
   animation: move-alert-sound-text 3s linear 2 forwards reverse;
+}
+
+#sound-on-first-part,
+#sound-on-second-part {
+  position: relative;
 }
 
 @keyframes move-alert-sound-text {
   0% {
-    transform: translateX(100%) skew(-15deg);
+    transform: translateX(calc(100% + 50vw)) skew(-15deg);
   }
   35% {
     transform: translateX(5%) skew(-15deg);
@@ -62,6 +71,6 @@
     transform: translateX(-5%) skew(-15deg);
   }
   100% {
-    transform: translateX(-100%) skew(-15deg);
+    transform: translateX(calc(-100% - 50vw)) skew(-15deg);
   }
 }
