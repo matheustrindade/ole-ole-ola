@@ -18,6 +18,13 @@ function shriknkPauseButton() {
   addClassAfterTime("pause-button-container", "shrink", 2300);
 }
 
+function startMusic() {
+  const audio = new Audio("./sound/ole_ola_lula.mp3");
+  audio.play();
+}
+
+function creteElement(elemName) {}
+
 function handleClickLogo() {
   "use strict";
 
@@ -33,4 +40,6 @@ function handleClickLogo() {
 
   //9000ms + 1s animation above
   addClassAfterTime("pt-logo", "shutdown-lights", 12000);
+
+  setTimeout(startMusic, 13000);
 }
