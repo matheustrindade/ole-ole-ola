@@ -30,4 +30,7 @@ function handleClickLogo() {
 
   //3500ms + 3000ms animation above
   addClassAfterTime("countdown", "show", 9000);
+
+  //9000ms + 1s animation above
+  addClassAfterTime("pt-logo", "shutdown-lights", 12000);
 }
