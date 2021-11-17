@@ -28,7 +28,7 @@ function creteElement(elemName) {}
 function handleClickLogo() {
   "use strict";
 
-  addClassById("pt-logo", "expanded");
+  addClassById("pt-logo", "party--expanded");
   addClassById("main", "start");
 
   shriknkPauseButton();
@@ -39,7 +39,7 @@ function handleClickLogo() {
   addClassAfterTime("countdown", "show", 9000);
 
   //9000ms + 1s animation above
-  addClassAfterTime("pt-logo", "shutdown-lights", 12000);
+  addClassAfterTime("pt-logo", "party--shutdown-lights", 12000);
 
   setTimeout(startMusic, 13000);
 }

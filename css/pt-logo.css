@@ -1,34 +1,13 @@
-.logo-wrapper {
+.party {
   filter: drop-shadow(-1px 3px 3px rgba(0, 0, 0, 0.5));
   transition: 0.3s;
 }
 
-.logo-wrapper:hover {
+.party:hover {
   filter: drop-shadow(-1px 13px 3px rgba(0, 0, 0, 0.5));
 }
 
-.logo-wrapper.expanded .party-logo {
-  clip-path: polygon(
-    50% 0%,
-    100% 0,
-    100% 35%,
-    100% 60%,
-    100% 100%,
-    50% 100%,
-    0 100%,
-    0 60%,
-    0 35%,
-    0 0
-  );
-  height: 100vh;
-  width: 100vw;
-}
-
-.logo-wrapper.expanded .party-logo::before {
-  transform: translate(-50%, -39%) scale(0);
-}
-
-.party-logo {
+.party__logo {
   background-color: #bf312c;
   cursor: pointer;
   clip-path: polygon(
@@ -50,7 +29,7 @@
   width: 13rem;
 }
 
-.party-logo::before {
+.party__logo::before {
   content: "pt";
   color: #fff;
   font-size: 3rem;
@@ -63,7 +42,28 @@
   transition: transform 200ms ease 500ms;
 }
 
-#pt-logo.shutdown-lights .party-logo {
+.party__logo--expanded {
+  clip-path: polygon(
+    50% 0%,
+    100% 0,
+    100% 35%,
+    100% 60%,
+    100% 100%,
+    50% 100%,
+    0 100%,
+    0 60%,
+    0 35%,
+    0 0
+  );
+  height: 100vh;
+  width: 100vw;
+}
+
+.party__logo--expanded::before {
+  transform: translate(-50%, -39%) scale(0);
+}
+
+.party--shutdown-lights .party__logo {
   animation: shutdown 1.5s forwards;
 }
 
@@ -73,5 +73,12 @@
   }
   to {
     background: #000000;
+  }
+}
+
+/* mobile only */
+@media (max-width: 600px) {
+  .party__click-label--visible {
+    display: block;
   }
 }
